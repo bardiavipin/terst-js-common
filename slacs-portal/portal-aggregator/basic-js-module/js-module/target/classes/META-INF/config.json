@@ -1,0 +1,8 @@
+{
+    "js-module@1.0.0/logger.es": {
+        "dependencies": ["exports", "./utils/log.es", "jquery"]
+    },
+    "js-module@1.0.0/utils/log.es": {
+        "dependencies": ["exports", "jquery"]
+    }
+}

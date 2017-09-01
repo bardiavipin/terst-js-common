@@ -1,0 +1,8 @@
+{
+    "js-module@1.0.0/logger.es": {
+        "dependencies": ["exports"]
+    },
+    "js-module@1.0.0/utils/log.es": {
+        "dependencies": ["exports", "js-common@1.0.0/bundle"]
+    }
+}

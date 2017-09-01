@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             version="2.0">
+    <portlet>
+        <portlet-name>osgi-spring</portlet-name>
+        <display-name>osgi-spring</display-name>
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>/WEB-INF/spring-context/portlet/osgi-spring-portlet.xml</value>
+        </init-param>
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Osgi Spring</title>
+            <short-title>Osgi Spring</short-title>
+            <keywords>Osgi Spring</keywords>
+        </portlet-info>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>guest</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>power-user</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>user</role-name>
+        </security-role-ref>
+    </portlet>
+    <portlet>
+        <portlet-name>Events</portlet-name>
+        <display-name>Events</display-name>
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>/WEB-INF/spring-context/portlet/event-portlet.xml</value>
+        </init-param>
+        <!--<init-param>
+            <name>view-template</name>
+            <value>/view.jsp</value>
+        </init-param>-->
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <!--<portlet-mode>edit</portlet-mode>-->
+        </supports>
+        <resource-bundle>content.language</resource-bundle>
+        <portlet-info>
+            <title>Events</title>
+            <short-title>Events</short-title>
+            <keywords>Events</keywords>
+        </portlet-info>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>guest</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>power-user</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>user</role-name>
+        </security-role-ref>
+    </portlet>
+    <portlet>
+        <portlet-name>LabSetup</portlet-name>
+        <display-name>Lab Setup</display-name>
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>/WEB-INF/spring-context/portlet/labsetup.xml</value>
+        </init-param>
+       <!-- <init-param>
+            <name>view-template</name>
+            <value>/view.jsp</value>
+        </init-param>-->
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <resource-bundle>content.language</resource-bundle>
+        <portlet-info>
+            <title>Lab Setup</title>
+            <short-title>Lab Setup</short-title>
+            <keywords>Lab Setup</keywords>
+        </portlet-info>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>guest</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>power-user</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>user</role-name>
+        </security-role-ref>
+    </portlet>
+
+
+</portlet-app>

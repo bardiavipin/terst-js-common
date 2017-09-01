@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:p="http://www.springframework.org/schema/p"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd
+">
+	<context:annotation-config />
+	<!--<mvc:annotation-driven/>-->
+	<!--<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="contentType" value="text/html;charset=UTF-8" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+	</bean>-->
+
+
+
+	<!--
+    View resolvers can also be configured with ResourceBundles or XML files. If you need
+    different view resolving based on Locale, you have to use the resource bundle resolver.
+    -->
+	<!--<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="cache" value="true"/>
+		<property name="prefix" value=""/>
+		<property name="suffix" value=".ftl"/>
+	</bean>-->
+
+
+	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath" value="/WEB-INF/views/"/>
+	</bean>
+
+	<bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver"
+		  p:viewClass="org.springframework.web.servlet.view.freemarker.FreeMarkerView"
+		  p:exposeSpringMacroHelpers="true"
+		  p:exposeRequestAttributes="true"
+		  p:suffix=".ftl"
+		  p:cache="true"
+		  p:order="1"
+		  p:contentType="text/html; charset=UTF-8"
+		  />
+
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="cache" value="true"/>
+		<property name="viewClass"
+				  value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<property name="order" value="2"/>
+		<property name="suffix" value=".jsp"/>
+		<property name="contentType" value="text/html; charset=UTF-8"/>
+	</bean>
+
+</beans>

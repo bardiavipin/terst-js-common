@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../../src/main/resources/META-INF/resources/utils/log.es.js"],"names":["msg","append"],"mappings":";;;;;;;mBAEe,UAASA,GAAT,EAAc;AAC5B,wBAAE,UAAF,EAAcC,MAAd,CAAqBD,GAArB;AACA,E","sourcesContent":["import $ from 'jquery';\n\nexport default function(msg) {\n\t$(\"#context\").append(msg );\n}"]}

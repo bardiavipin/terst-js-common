@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.netcracker.scp.model.Events">
+		<field name="uuid" type="String" />
+		<field name="eventId" type="long" />
+		<field name="labId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="title" type="String" />
+		<field name="description" type="String" />
+		<field name="startTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="activityType" type="String" />
+		<field name="fullDay" type="boolean" />
+		<field name="portalUser" type="String" />
+		<field name="portalPass" type="String" />
+		<field name="ncUser" type="String" />
+		<field name="ncPass" type="String" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.netcracker.scp.model.LabDetails">
+		<field name="uuid" type="String" />
+		<field name="labId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="title" type="String" />
+		<field name="description" type="String" />
+		<field name="portalUrl" type="String" />
+		<field name="ncUrl" type="String" />
+		<field name="otherUrl" type="String" />
+		<field name="vimUser" type="String" />
+		<field name="vimPass" type="String" />
+		<field name="sdnUser" type="String" />
+		<field name="sdnPass" type="String" />
+		<field name="bassLink" type="String" />
+		<field name="status" type="boolean" />
+	</model>
+</model-hints>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>slacs-service</artifactId>
+    <groupId>com.netcracker.rss.sdn</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>slacs-service-service</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.liferay</groupId>
+        <artifactId>com.liferay.portal.tools.service.builder</artifactId>
+        <version>1.0.123</version>
+        <configuration>
+          <apiDirName>../slacs-service-api/src/main/java</apiDirName>
+          <autoNamespaceTables>true</autoNamespaceTables>
+          <buildNumberIncrement>true</buildNumberIncrement>
+          <hbmFileName>src/main/resources/META-INF/module-hbm.xml</hbmFileName>
+          <implDirName>src/main/java</implDirName>
+          <modelHintsFileName>src/main/resources/META-INF/portlet-model-hints.xml</modelHintsFileName>
+          <osgiModule>true</osgiModule>
+          <propsUtil>com.netcracker.scp.service.util.ServiceProps</propsUtil>
+          <resourcesDirName>src/main/resources</resourcesDirName>
+          <springFileName>src/main/resources/META-INF/spring/module-spring.xml</springFileName>
+          <sqlDirName>src/main/resources/META-INF/sql</sqlDirName>
+          <sqlFileName>tables.sql</sqlFileName>
+          <testDirName>src/main/test</testDirName>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>com.netcracker.rss.sdn</groupId>
+      <artifactId>slacs-service-api</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
+

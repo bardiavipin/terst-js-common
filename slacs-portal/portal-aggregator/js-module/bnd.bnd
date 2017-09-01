@@ -1,0 +1,6 @@
+Bundle-Name: Blade JS ES2015 Module
+Bundle-SymbolicName: blade.js.es2015.module
+-includeresource: package.json,target/classes,META-INF/resources/config.js=config.js
+-plugin.npm: com.liferay.ant.bnd.npm.NpmAnalyzerPlugin
+Liferay-JS-Config: /META-INF/resources/config.js
+Web-ContextPath: /js-module

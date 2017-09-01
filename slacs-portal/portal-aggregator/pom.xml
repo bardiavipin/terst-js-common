@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>portal-aggregator</artifactId>
+    <version>0.1</version>
+    <name>Portal Modules</name>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>com.netcracker.rss.slac</groupId>
+        <artifactId>slacs-portal</artifactId>
+        <version>0.1</version>
+    </parent>
+
+
+        <properties>
+            <liferay.auto.deploy.dir>docker/.data/deploy</liferay.auto.deploy.dir>
+            <spring.version>4.3.1.RELEASE</spring.version>
+            <spring.version.osgi.bundle>4.3.1.RELEASE_1</spring.version.osgi.bundle>
+            <liferay.version>7.0-ga3</liferay.version>
+            <jdk.version>1.8</jdk.version>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <project.root>${project.basedir}</project.root>
+            <liferay.base.path>/opt/liferay-portal</liferay.base.path>
+            <com.liferay.portal.kernel.version>2.3.0</com.liferay.portal.kernel.version>
+            <project.parent.relation>/</project.parent.relation>
+            <skip.npm.install>true</skip.npm.install>
+            <auto-copy.skip>true</auto-copy.skip>
+            <auto-copy.artifact.name>${project.build.finalName}.jar</auto-copy.artifact.name>
+            <auto-deploy.source.dir>${project.build.directory}</auto-deploy.source.dir>
+        </properties>
+
+
+
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>liferay-plugin-repo</id>
+            <name>Liferay Repo</name>
+            <url>https://repository.liferay.com/nexus/content/groups/liferay-ce/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+    <repositories>
+        <repository>
+            <id>liferay-repo</id>
+            <name>Liferay Repo</name>
+            <url>https://repository.liferay.com/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+
+
+    <modules>
+        <module>portlets</module>
+        <module>slacs-service</module>
+		<module>js-common</module>
+        <module>js-module</module>
+    </modules>
+
+   <!-- <profiles>
+        <profile>
+            <id>theme-aware</id>
+            <modules>
+                <module>themes</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>layout-aware</id>
+            <modules>
+                <module>layouts</module>
+            </modules>
+        </profile>
+    </profiles>-->
+
+
+
+</project>

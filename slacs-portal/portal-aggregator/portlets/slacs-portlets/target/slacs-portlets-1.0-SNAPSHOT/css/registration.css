@@ -1,0 +1,81 @@
+.registration .separator {
+  margin: 13px 0 10px 0 !important; }
+
+.registration input.span5 {
+  width: 390px !important; }
+
+.registration textarea.span5 {
+  width: 390px !important; }
+  
+.registration input.span3 {
+  width: 219px !important; }
+
+.registration .input-prepend {
+  vertical-align: top !important; }
+
+.registration .alert-error {
+  padding: 1px 7px !important;
+  margin: 2px 0 0 0 !important;
+  font-size: 10px !important;
+  display: block !important; }
+
+.registration .help {
+  margin: 14px !important; }
+
+.registration .alert.alert-error.general {
+  margin-bottom: 20px !important; }
+
+#registration-agreement {
+  display: none !important; }
+
+#agreement-modal-body p {
+  font-size: 15px !important;
+  line-height: 20px !important;
+  color: #999999 !important;
+  text-align: justify !important; }
+
+.input-prepend .aui-component.aui-autocomplete {
+  display: inline-block !important; }
+
+.aui-autocomplete-results {
+  z-index: 999999 !important ;
+  width: 380px !important; }
+
+.input-prepend .aui-component.aui-autocomplete input {
+  width: 366px !important; }
+
+input-prepend.disabled {
+  opacity: 0.7 !important; }
+
+.input-prepend.disabled input {
+  cursor: default !important;
+  width: 366px !important; }
+
+div.aui-combobox-content button {
+  background: #f2f5f9 none !important;
+  margin-left: -10px !important;
+  border: 1px solid #d6e2eb !important;
+  width: 16px !important;
+  height: 20px !important;
+  border-radius: 0 4px 4px 0 !important;
+  padding: 4px 8px !important;
+  z-index: 10000 !important;
+  opacity: 0.99 !important; }
+
+.input-prepend input:focus {
+  z-index: 0 !important; }
+
+div.aui-combobox-content button span.aui-icon-circle-triangle-b {
+  background-image: url("../images/glyphicons-halflings.png");
+  background-position: -313px -119px !important; }
+
+span.aui-icon-circle-triangle-b:after {
+  content: "<i class='icon-road'></i>" !important; }
+
+select.title-select {
+  height: 30px !important;
+  width: 404px !important; }
+
+.lfr-autorow-controls {
+    right: 0px !important;
+}

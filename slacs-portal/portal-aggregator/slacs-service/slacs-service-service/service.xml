@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.netcracker.scp">
+	<namespace>Portlets</namespace>
+	<entity name="LabDetails" uuid="true" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="labId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="title" type="String" />
+		<column name="description" type="String" />
+		<column name="portalUrl" type="String" />
+		<column name="ncUrl" type="String" />
+		<column name="otherUrl" type="String" />
+		<column name="vimUser" type="String" />
+		<column name="vimPass" type="String" />
+		<column name="sdnUser" type="String" />
+		<column name="sdnPass" type="String" />
+		<column name="bassLink" type="String" />
+
+		<column name="status" type="boolean" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="User" return-type="Collection">
+			<finder-column name="userId" />
+			<finder-column name="companyId" />
+		</finder>
+
+		<finder name="Status" return-type="Collection">
+			<finder-column name="status" />
+			<finder-column name="companyId" />
+		</finder>
+	</entity>
+
+	<entity name="Events" uuid="true" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+		<column name="eventId" type="long" primary="true" />
+		<!-- Reference to LabDetails -->
+		<column name="labId" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="title" type="String" />
+		<column name="description" type="String" />
+		<column name="startTime" type="Date" />
+		<column name="endTime" type="Date" />
+		<column name="activityType" type="String" />
+		<column name="fullDay" type="boolean" />
+		<column name="portalUser" type="String" />
+		<column name="portalPass" type="String" />
+		<column name="ncUser" type="String" />
+		<column name="ncPass" type="String" />
+
+		<column name="status" type="int" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="User" return-type="Collection">
+			<finder-column name="userId" />
+			<finder-column name="companyId" />
+		</finder>
+
+		<finder name="LabStatus" return-type="Collection">
+			<finder-column name="labId" />
+			<finder-column name="status" />
+			<finder-column name="companyId" />
+		</finder>
+
+		<finder name="Lab" return-type="Collection">
+			<finder-column name="labId" />
+			<finder-column name="companyId" />
+		</finder>
+
+		<finder name="LabUser" return-type="Collection">
+			<finder-column name="labId" />
+			<finder-column name="userId" />
+			<finder-column name="companyId" />
+		</finder>
+	</entity>
+</service-builder>

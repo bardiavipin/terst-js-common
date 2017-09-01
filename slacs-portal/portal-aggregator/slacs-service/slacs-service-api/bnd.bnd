@@ -1,0 +1,9 @@
+Bundle-Name: slacs-service-api
+Bundle-SymbolicName: com.netcracker.scp.api
+Bundle-Version: 1.0-SNAPSHOT
+Export-Package:\
+	com.netcracker.scp.exception,\
+	com.netcracker.scp.model,\
+	com.netcracker.scp.service,\
+	com.netcracker.scp.service.persistence
+-includeresource: META-INF/service.xml=../slacs-service-service/service.xml

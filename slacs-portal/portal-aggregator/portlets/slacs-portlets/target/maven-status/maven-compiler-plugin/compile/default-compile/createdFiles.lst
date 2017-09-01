@@ -1,0 +1,12 @@
+com\netcracker\scp\lab\events\BNDDependencyFix.class
+com\netcracker\scp\lab\events\EventsController.class
+com\netcracker\scp\lab\setup\LabSetupController.class
+com\netcracker\scp\lab\setup\businessdelegate\LabSetupBusinessDelegate.class
+com\netcracker\scp\lab\events\businessdelegate\EventsSetupBusinessDelegate.class
+com\netcracker\scp\lab\servicetracker\LabDetailsServiceTracker.class
+com\netcracker\scp\lab\events\EventEditController.class
+com\netcracker\scp\lab\constants\Constants.class
+com\netcracker\scp\vo\CalendarVO.class
+com\netcracker\scp\lab\servicetracker\EventServiceTracker.class
+com\netcracker\scp\lab\setup\businessdelegate\LabSetupBusinessDelegate$1.class
+com\netcracker\scp\vo\DescUrlVO.class

@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "ecmaFeatures": {
+    "classes": true,
+    "jsx": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "semi": [
+      "warn",
+      "always"
+    ],
+    "react/no-unknown-property": "warn",
+    "react/no-find-dom-node": "warn",
+    "react/prop-types": "warn"
+  },
+  "globals": {
+    "Liferay": false,
+    "AUI": false,
+    "google": false
+  }
+}

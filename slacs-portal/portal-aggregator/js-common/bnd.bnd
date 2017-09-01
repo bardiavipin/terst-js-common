@@ -1,0 +1,6 @@
+Bundle-Name: JS Common
+Bundle-SymbolicName: js.common
+-includeresource: package.json,\
+META-INF/resources=dist
+-plugin.npm: com.liferay.ant.bnd.npm.NpmAnalyzerPlugin
+Web-ContextPath: /js-common
